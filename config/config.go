@@ -18,6 +18,9 @@ func Load() *Config {
 		ServerPort: getEnv("SERVER_PORT", "5005"),
 		//BatFilePath:   getEnv("BAT_FILE_PATH", "testdb"),
 		//Для теста +
+		//windows
+		//BatFilePath:   getEnv("BAT_FILE_PATH", "F:/project/webserver_2/scripts/testdb_2.bat"),
+		//mac
 		BatFilePath: getEnv("BAT_FILE_PATH", "/Users/nikita/project/go/webserver/scripts/testdb.sh"),
 		//Для теста-
 		TimeoutSec:    getEnvAsInt("TIMEOUT_SEC", 30),
