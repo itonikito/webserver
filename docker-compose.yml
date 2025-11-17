@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  bat-executor:
+    build: .
+    ports:
+      - "5005:5005"
+    environment:
+      - SERVER_PORT=5005
+      - BAT_FILE_PATH=scripts/testdb.bat
+      - TIMEOUT_SEC=30
+      - MAX_CONCURRENT=5
+      - LOG_LEVEL=info
+    volumes:
+      - ./scripts:/app/scripts
+    restart: unless-stopped
